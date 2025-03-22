@@ -1,4 +1,3 @@
-# AtomicBomber
 # Atomic Bomber
 
 **Atomic Bomber** is a simple yet engaging game developed as a project for the Advanced Programming (Object-Oriented) course at Sharif University of Technology. The game is implemented using **Java** and **JavaFX**, following the **MVC architecture**. In this game, you control an airplane and must destroy ground targets by dropping various types of bombs.
