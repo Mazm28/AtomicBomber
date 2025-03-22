@@ -97,7 +97,7 @@ If you are interested in contributing to this project, feel free to create new i
 
 ## Contact Me
 
-If you have any questions or suggestions, you can reach out to me via [email](mailto:your-email@example.com) or my [GitHub profile](https://github.com/Mazm28).
+If you have any questions or suggestions, you can reach out to me via [email](mailto:meschi.ma24@egmail.com) or my [GitHub profile](https://github.com/Mazm28).
 
 ---
 
