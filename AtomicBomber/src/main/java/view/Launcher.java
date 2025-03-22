@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -19,6 +20,7 @@ public class Launcher extends Application {
     public void start(Stage stage) throws Exception {
         Launcher.stage = stage;
         stage.setResizable(false);
+        stage.getIcons().add(new Image(Objects.requireNonNull(GameLauncher.class.getResourceAsStream("/Image/Icon/main.png"))));
         URL url = Launcher.class.getResource("/FXML/Main.fxml");
         assert url != null;
         Parent root = FXMLLoader.load(url);
@@ -32,6 +34,7 @@ public class Launcher extends Application {
     public void changeScene(String fxml) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxml)));
         stage.getScene().setRoot(root);
+        stage.show();
     }
 
     public static void main(String[] args) {

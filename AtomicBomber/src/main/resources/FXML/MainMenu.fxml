@@ -13,12 +13,12 @@
    <children>
       <Pane prefHeight="400.0" prefWidth="600.0" styleClass="sign-in-panel">
          <children>
-            <Button fx:id="logout" layoutX="534.0" layoutY="14.0" mnemonicParsing="false" onAction="#userLogout" prefHeight="33.0" prefWidth="54.0" styleClass="gold-btn" text="Logout" />
-            <Button layoutX="15.0" layoutY="125.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="150.0" styleClass="gold-btn" text="Start a new game" />
+            <Button layoutX="534.0" layoutY="14.0" mnemonicParsing="false" onAction="#userLogout" prefHeight="33.0" prefWidth="54.0" styleClass="gold-btn" text="Logout" />
+            <Button layoutX="15.0" layoutY="125.0" mnemonicParsing="false" onAction="#startNewGame" prefHeight="33.0" prefWidth="150.0" styleClass="gold-btn" text="Start a new game" />
             <Button layoutX="55.0" layoutY="175.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="150.0" styleClass="gold-btn" text="Continue saved game" />
-            <Button fx:id="profileMenuBtn" layoutX="95.0" layoutY="225.0" mnemonicParsing="false" onAction="#openProfileMenu" prefHeight="33.0" prefWidth="150.0" styleClass="gold-btn" text="Profile Menu" />
-            <Button fx:id="scoreBoardBtn" layoutX="135.0" layoutY="275.0" mnemonicParsing="false" onAction="#openScoreBoard" prefHeight="33.0" prefWidth="150.0" styleClass="gold-btn" text="Score Board" />
-            <Button fx:id="gameSettingBtn" layoutX="175.0" layoutY="325.0" mnemonicParsing="false" onAction="#openGameSetting" prefHeight="33.0" prefWidth="150.0" styleClass="gold-btn" text="Game Settings" />
+            <Button layoutX="95.0" layoutY="225.0" mnemonicParsing="false" onAction="#openProfileMenu" prefHeight="33.0" prefWidth="150.0" styleClass="gold-btn" text="Profile Menu" />
+            <Button layoutX="135.0" layoutY="275.0" mnemonicParsing="false" onAction="#openScoreBoard" prefHeight="33.0" prefWidth="150.0" styleClass="gold-btn" text="Score Board" />
+            <Button layoutX="175.0" layoutY="325.0" mnemonicParsing="false" onAction="#openGameSetting" prefHeight="33.0" prefWidth="150.0" styleClass="gold-btn" text="Game Settings" />
             <VBox alignment="TOP_CENTER" layoutX="361.0" layoutY="100.0" prefHeight="267.0" prefWidth="200.0">
                <children>
                   <Circle fx:id="avatarCircle" fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" />

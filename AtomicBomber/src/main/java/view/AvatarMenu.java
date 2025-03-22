@@ -5,11 +5,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import model.User;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
@@ -71,5 +74,13 @@ public class AvatarMenu implements Initializable {
 
     public void uploadAvatar(MouseEvent mouseEvent) throws IOException {
         controller.chooseAvatarFromFiles(mainCircle, (Button) mouseEvent.getSource());
+    }
+
+    public void onDragDropped(DragEvent dragEvent) throws IOException {
+        Dragboard dragboard = dragEvent.getDragboard();
+        if (dragboard.hasFiles()) {
+            File file = dragboard.getFiles().getFirst();
+            controller.chooseDroppedFile(mainCircle, file);
+        }
     }
 }

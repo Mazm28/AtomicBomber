@@ -1,7 +1,6 @@
 package view;
 
 import controller.LoginMenuController;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -19,9 +18,8 @@ public class LoginMenu {
     @FXML
     private PasswordField password;
 
-    public void loginUser(ActionEvent actionEvent) throws IOException {
+    public void loginUser() throws IOException {
         Launcher launcher = new Launcher();
-        User user;
         if (controller.signIn(username.getText(), password.getText(), wrongLogin)) {
             launcher.changeScene("/FXML/MainMenu.fxml");
         }

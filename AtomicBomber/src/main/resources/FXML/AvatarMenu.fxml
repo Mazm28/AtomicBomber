@@ -9,15 +9,15 @@
    <children>
       <Pane prefHeight="400.0" prefWidth="600.0" styleClass="sign-in-panel">
          <children>
-            <Circle fx:id="circle2" layoutX="214.0" layoutY="122.0" radius="40.0" onMouseClicked="#chooseAvatar"/>
-            <Circle fx:id="circle4" layoutX="54.0" layoutY="282.0" radius="40.0" onMouseClicked="#chooseAvatar"/>
+            <Circle fx:id="mainCircle" layoutX="333.0" layoutY="203.0" radius="74.0" onDragEntered="#onDragDropped"/>
             <Circle fx:id="circle1" layoutX="54.0" layoutY="122.0" radius="40.0" onMouseClicked="#chooseAvatar"/>
-            <Circle fx:id="circle5" layoutX="214.0" layoutY="282.0" radius="40.0" onMouseClicked="#chooseAvatar"/>
+            <Circle fx:id="circle2" layoutX="214.0" layoutY="122.0" radius="40.0" onMouseClicked="#chooseAvatar"/>
             <Circle fx:id="circle3" layoutX="134.0" layoutY="202.0" radius="40.0" onMouseClicked="#chooseAvatar"/>
+            <Circle fx:id="circle4" layoutX="54.0" layoutY="282.0" radius="40.0" onMouseClicked="#chooseAvatar"/>
+            <Circle fx:id="circle5" layoutX="214.0" layoutY="282.0" radius="40.0" onMouseClicked="#chooseAvatar"/>
             <Button layoutX="436.0" layoutY="129.0" mnemonicParsing="false" onAction="#changeAvatar" prefHeight="31.0" prefWidth="150.0" styleClass="gold-btn" text="Change Avatar" />
             <Button layoutX="436.0" layoutY="186.0" mnemonicParsing="false" onMouseClicked="#uploadAvatar" prefHeight="31.0" prefWidth="150.0" styleClass="gold-btn" text="Upload Avatar" />
             <Button layoutX="436.0" layoutY="240.0" mnemonicParsing="false" onAction="#backToProfileMenu" prefHeight="31.0" prefWidth="150.0" styleClass="gold-btn" text="Back" />
-            <Circle fx:id="mainCircle" layoutX="333.0" layoutY="203.0" radius="74.0" />
          </children>
       </Pane>
    </children>

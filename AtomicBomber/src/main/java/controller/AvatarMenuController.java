@@ -4,7 +4,6 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.Path;
 import javafx.stage.FileChooser;
 import view.AvatarMenu;
 
@@ -33,9 +32,21 @@ public class AvatarMenuController {
         if (selectedFile != null) {
             Image newAvatarImage = new Image(selectedFile.toURI().toString());
             mainCircle.setFill(new ImagePattern(newAvatarImage));
-            String path = "src/main/resources/Image/Avatars/";
-            Path destination = (Path) java.nio.file.Path.of(path + selectedFile.getName());
-            Files.copy(selectedFile.toPath(), (java.nio.file.Path) destination, StandardCopyOption.REPLACE_EXISTING);
+            File destinationDirectory = new File("src/main/resources/Image/Avatars");
+            File newFile = new File(destinationDirectory, selectedFile.getName());
+            Files.copy(selectedFile.toPath(), newFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            AvatarMenu.setNewAvatarPath("/Image/Avatars/" + selectedFile.getName());
+        }
+    }
+
+    public void chooseDroppedFile(Circle mainCircle, File selectedFile) throws IOException {
+        if (selectedFile != null && selectedFile.getName().toLowerCase().endsWith(".png")) {
+            ImagePattern imagePattern = new ImagePattern(new javafx.scene.image.Image(selectedFile.toURI().toString()));
+            mainCircle.setFill(imagePattern);
+            File destinationDirectory = new File("src/main/resources/Image/Avatars");
+            File newFile = new File(destinationDirectory, selectedFile.getName());
+            Files.copy(selectedFile.toPath(), newFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            AvatarMenu.setNewAvatarPath("/Image/Avatars/" + selectedFile.getName());
         }
     }
 }

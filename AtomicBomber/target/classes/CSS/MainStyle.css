@@ -3,7 +3,7 @@
 }
 
 .pane{
-    -fx-background-color: #806C00;
+    -fx-background-color: #FFD700;
 }
 
 .trans-btn-white-border{
@@ -35,14 +35,14 @@
 }
 
 .gold-btn{
-    -fx-background-color: #806C00;
+    -fx-background-color: #FFD700;
     -fx-background-radius: 5px;
     -fx-text-fill: #ffffff;
 }
 
 .username{
     -fx-background-color: transparent;
-    -fx-border-color: #806C00;
+    -fx-border-color: #FFD700;
     -fx-border-width: 0px 0px 1px 0px;
-    -fx-text-fill: #806C00;
+    -fx-text-fill: #FFD700;
 }

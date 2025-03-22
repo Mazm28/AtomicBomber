@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="parent" stylesheets="@../CSS/MainStyle.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="view.ScoreBoard">
+   <Pane prefHeight="400.0" prefWidth="600.0" styleClass="sign-in-panel">
+      <children>
+         <VBox alignment="CENTER" layoutX="96.0" layoutY="14.0" prefHeight="373.0" prefWidth="408.0" spacing="10.0">
+            <children>
+               <Label fx:id="no1" alignment="CENTER" prefHeight="35.0" prefWidth="414.0" textFill="GOLD">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Label>
+               <Label fx:id="no2" alignment="CENTER" prefHeight="27.0" prefWidth="413.0" textFill="GOLD">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Label>
+               <Label fx:id="no3" alignment="CENTER" prefHeight="25.0" prefWidth="411.0" textFill="GOLD">
+                  <font>
+                     <Font size="16.0" />
+                  </font>
+               </Label>
+               <Label fx:id="no4" alignment="CENTER" prefHeight="17.0" prefWidth="411.0" textFill="WHITE" />
+               <Label fx:id="no5" alignment="CENTER" prefHeight="17.0" prefWidth="428.0" textFill="WHITE" />
+               <Label fx:id="no6" alignment="CENTER" prefHeight="17.0" prefWidth="423.0" textFill="WHITE" />
+               <Label fx:id="no7" alignment="CENTER" prefHeight="17.0" prefWidth="447.0" textFill="WHITE" />
+               <Label fx:id="no8" alignment="CENTER" prefHeight="17.0" prefWidth="525.0" textFill="WHITE" />
+               <Label fx:id="no9" alignment="CENTER" prefHeight="17.0" prefWidth="573.0" textFill="WHITE" />
+               <Label fx:id="no10" alignment="CENTER" prefHeight="17.0" prefWidth="591.0" textFill="WHITE" />
+               <Button mnemonicParsing="false" onAction="#backToMainMenu" prefHeight="31.0" prefWidth="150.0" styleClass="gold-btn" text="Back" />
+            </children>
+         </VBox>
+      </children>
+   </Pane>
+</AnchorPane>

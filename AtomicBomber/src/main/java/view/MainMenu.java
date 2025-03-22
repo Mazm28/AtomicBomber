@@ -1,13 +1,14 @@
 package view;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import model.User;
 
 import java.io.IOException;
@@ -29,12 +30,13 @@ public class MainMenu implements Initializable {
         avatarCircle.setFill(new ImagePattern(avatar));
     }
 
-    public void userLogout(ActionEvent actionEvent) throws IOException {
+    public void userLogout() throws Exception {
         Launcher launcher = new Launcher();
+        launcher.start(Launcher.stage);
         launcher.changeScene("/FXML/Main.fxml");
     }
 
-    public void closeApp(ActionEvent actionEvent) {
+    public void closeApp() {
         Platform.exit();
     }
 
@@ -43,9 +45,16 @@ public class MainMenu implements Initializable {
         launcher.changeScene("/FXML/ProfileMenu.fxml");
     }
 
-    public void openScoreBoard(ActionEvent actionEvent) {
+    public void openScoreBoard() throws IOException {
+        Launcher launcher = new Launcher();
+        launcher.changeScene("/FXML/ScoreBoard.fxml");
     }
 
-    public void openGameSetting(ActionEvent actionEvent) {
+    public void openGameSetting() {
+    }
+
+    public void startNewGame() throws Exception {
+        Stage stage = Launcher.stage;
+        new GameLauncher(User.getLoggedInUser()).start(stage);
     }
 }

@@ -7,11 +7,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.util.Duration;
+import model.User;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class LauncherController implements Initializable {
@@ -67,7 +70,13 @@ public class LauncherController implements Initializable {
     }
 
     @FXML
-    private void playAsGuest(ActionEvent event) {
-
+    private void playAsGuest(ActionEvent event) throws Exception {
+        Stage stage = Launcher.stage;
+        Random random = new Random();
+        int randomNumber = random.nextInt(5) + 1;
+        String avatarPath = "/Image/Avatars/" + randomNumber + ".png";
+        User user = new User("Guest", null, avatarPath);
+        User.setLoggedInUser(user);
+        new GameLauncher(user).start(stage);
     }
 }
